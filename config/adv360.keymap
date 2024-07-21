@@ -6,7 +6,7 @@
 
 /* Custom Settings */
 
-&mt { tapping-term-ms = <300>; };
+&mt { tapping-term-ms = <400>; };
 
 / {
     behaviors {
