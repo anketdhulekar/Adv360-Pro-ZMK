@@ -5,9 +5,8 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /* Custom Settings */
-&mt {
-    tapping-term-ms = <250>;
-};
+
+&mt { tapping-term-ms = <300>; };
 
 / {
     behaviors {
