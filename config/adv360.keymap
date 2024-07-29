@@ -52,11 +52,11 @@
 
         symbols {
             bindings = <
-&none  &none  &none  &none  &none           &none  &to 0                                  &to 1  &kp SINGLE_QUOTE   &kp LESS_THAN               &kp GREATER_THAN       &kp QUESTION   &kp ASTERISK   &none
-&none  &none  &none  &none  &none           &none  &to 2                                  &to 3  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp PLUS       &kp AT_SIGN
-&none  &none  &none  &none  &kp LEFT_SHIFT  &none  &none  &none  &none      &none  &none  &none  &kp COMMA          &mt RIGHT_SHIFT LEFT_BRACE  &kp RIGHT_BRACE        &kp DOT        &kp MINUS      &kp DOLLAR
-&none  &none  &none  &none  &none           &none                &none      &none                &kp GRAVE          &kp BACKSLASH               &kp SLASH              &kp EQUAL      &kp AMPERSAND  &kp EXCLAMATION
-&none  &none  &none  &none  &none                  &none  &none  &none      &none  &none  &none                     &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &kp HASH       &kp PERCENT    &kp CARET
+&none  &none  &none  &none  &none           &none  &to 0                                  &to 1  &kp TILDE          &kp LESS_THAN               &kp GREATER_THAN       &kp QUESTION       &kp AMPERSAND  &none
+&none  &none  &none  &none  &none           &none  &to 2                                  &to 3  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &kp COLON          &kp PLUS       &kp AT_SIGN
+&none  &none  &none  &none  &kp LEFT_SHIFT  &none  &none  &none  &none      &none  &none  &none  &kp DOUBLE_QUOTES  &mt RIGHT_SHIFT LEFT_BRACE  &kp RIGHT_BRACE        &kp RS(SEMICOLON)  &kp MINUS      &kp DOLLAR
+&none  &none  &none  &none  &none           &none                &none      &none                &kp GRAVE          &kp BACKSLASH               &kp SLASH              &kp EQUAL          &kp ASTERISK   &kp EXCLAMATION
+&none  &none  &none  &none  &none                  &none  &none  &none      &none  &none  &none                     &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &kp HASH           &kp PERCENT    &kp CARET
             >;
         };
 
