@@ -38,6 +38,8 @@
             label = "COPY";
             #binding-cells = <0>;
             bindings = <&mt LEFT_GUI D>, <&mt LG(C) D>;
+
+            tapping-term-ms = <50>;
         };
 
         paste: paste {
@@ -45,6 +47,8 @@
             label = "PASTE";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT F>, <&mt LG(V) F>;
+
+            tapping-term-ms = <50>;
         };
     };
 
