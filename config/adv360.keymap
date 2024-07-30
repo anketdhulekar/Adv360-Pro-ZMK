@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings = <&hm LEFT_GUI D>, <&mt LG(C) D>;
 
-            tapping-term-ms = <50>;
+            tapping-term-ms = <100>;
         };
 
         paste: paste {
@@ -48,7 +48,7 @@
             #binding-cells = <0>;
             bindings = <&hm LEFT_SHIFT F>, <&mt LG(V) F>;
 
-            tapping-term-ms = <50>;
+            tapping-term-ms = <100>;
         };
     };
 
