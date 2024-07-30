@@ -32,24 +32,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        copy: copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
-            #binding-cells = <0>;
-            bindings = <&hm LEFT_GUI D>, <&mt LG(C) D>;
-
-            tapping-term-ms = <150>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
-            #binding-cells = <0>;
-            bindings = <&hm LEFT_SHIFT F>, <&mt LG(V) F>;
-
-            tapping-term-ms = <150>;
-        };
     };
 
     macros {
@@ -60,11 +42,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL     &kp N1             &kp N2       &kp N3    &kp N4     &kp N5  &to 0                                                           &to 1      &kp N6  &kp N7        &kp N8           &kp N9       &kp N0                           &kp MINUS
-&kp ESC       &kp Q              &kp W        &kp E     &kp R      &kp T   &to 2                                                           &to 3      &kp Y   &kp U         &kp I            &kp O        &kp P                            &kp BSLH
-&kp CAPSLOCK  &hm LEFT_ALT A     &hm LCTRL S  &copy     &paste     &kp G   &none      &none          &none         &none          &none    &none      &kp H   &hm RSHIFT J  &hm RIGHT_GUI K  &hm RCTRL L  &hm RIGHT_ALT SEMI               &kp SQT
-&kp LSHFT     &kp Z              &kp X        &lt 1 C   &kp V      &kp B                             &kp HOME      &kp PAGE_UP                        &kp N   &kp M         &lt 2 COMMA      &kp DOT      &kp FSLH                         &kp RSHFT
-&mo 1         &kp RIGHT_CONTROL  &kp GRAVE    &kp LEFT  &kp RIGHT          &kp SPACE  &kp BACKSPACE  &kp END       &kp PAGE_DOWN  &kp TAB  &kp ENTER          &kp UP        &kp DOWN         &kp LBKT     &mt RIGHT_CONTROL RIGHT_BRACKET  &mo 2
+&kp EQUAL     &kp N1             &kp N2       &kp N3          &kp N4            &kp N5  &to 0                                                                 &to 1            &kp N6  &kp N7        &kp N8           &kp N9       &kp N0                           &kp MINUS
+&kp ESC       &kp Q              &kp W        &kp E           &kp R             &kp T   &to 2                                                                 &to 3            &kp Y   &kp U         &kp I            &kp O        &kp P                            &kp BSLH
+&kp CAPSLOCK  &hm LEFT_ALT A     &hm LCTRL S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G   &none            &none          &none         &none          &none    &none            &kp H   &hm RSHIFT J  &hm RIGHT_GUI K  &hm RCTRL L  &hm RIGHT_ALT SEMI               &kp SQT
+&kp LSHFT     &kp Z              &kp X        &lt 1 C         &kp V             &kp B                                   &kp HOME      &kp PAGE_UP                              &kp N   &kp M         &lt 2 COMMA      &kp DOT      &kp FSLH                         &kp RSHFT
+&mo 1         &kp RIGHT_CONTROL  &kp GRAVE    &kp LEFT        &kp RIGHT                 &mt LG(C) SPACE  &kp BACKSPACE  &kp END       &kp PAGE_DOWN  &kp TAB  &mt RG(V) ENTER          &kp UP        &kp DOWN         &kp LBKT     &mt RIGHT_CONTROL RIGHT_BRACKET  &mo 2
             >;
         };
 
