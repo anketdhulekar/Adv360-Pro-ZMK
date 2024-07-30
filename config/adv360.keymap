@@ -28,7 +28,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick_tap_ms = <175>;
+            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -37,7 +37,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "COPY";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI D>, <&mt LG(C) D>;
+            bindings = <&hm LEFT_GUI D>, <&mt LG(C) D>;
 
             tapping-term-ms = <50>;
         };
@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PASTE";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT F>, <&mt LG(V) F>;
+            bindings = <&hm LEFT_SHIFT F>, <&mt LG(V) F>;
 
             tapping-term-ms = <50>;
         };
