@@ -50,11 +50,11 @@
 
         symbols {
             bindings = <
-&none  &none  &none  &none  &none           &none  &to 0                                       &to 1   &kp TILDE          &kp LESS_THAN               &kp GREATER_THAN       &kp QUESTION   &kp AMPERSAND  &none
-&none  &none  &none  &none  &none           &none  &to 2                                       &to 3   &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &kp COLON      &kp PLUS       &kp AT_SIGN
-&none  &none  &none  &none  &kp LEFT_SHIFT  &none  &none   &none   &none       &none   &none   &none   &kp DOUBLE_QUOTES  &mt RIGHT_SHIFT LEFT_BRACE  &kp RIGHT_BRACE        &kp SEMICOLON  &kp MINUS      &kp DOLLAR
-&none  &none  &none  &none  &none           &none                  &trans      &trans                  &kp GRAVE          &kp BACKSLASH               &kp SLASH              &kp EQUAL      &kp ASTERISK   &kp EXCLAMATION
-&none  &none  &none  &none  &none                  &trans  &trans  &trans      &trans  &trans  &trans                     &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &kp HASH       &kp PERCENT    &kp CARET
+&none  &none   &none   &none   &none   &none  &to 0                                       &to 1   &kp TILDE          &kp LESS_THAN               &kp GREATER_THAN       &kp QUESTION   &kp AMPERSAND  &none
+&none  &none   &none   &none   &none   &none  &to 2                                       &to 3   &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &kp COLON      &kp PLUS       &kp AT_SIGN
+&none  &trans  &trans  &trans  &trans  &none  &none   &none   &none       &none   &none   &none   &kp DOUBLE_QUOTES  &mt RIGHT_SHIFT LEFT_BRACE  &kp RIGHT_BRACE        &kp SEMICOLON  &kp MINUS      &kp DOLLAR
+&none  &none   &none   &none   &none   &none                  &trans      &trans                  &kp GRAVE          &kp BACKSLASH               &kp SLASH              &kp EQUAL      &kp ASTERISK   &kp EXCLAMATION
+&none  &none   &none   &none   &none          &trans  &trans  &trans      &trans  &trans  &trans                     &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &kp HASH       &kp PERCENT    &kp CARET
             >;
         };
 
@@ -70,11 +70,11 @@
 
         mod {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0                                                   &to 1            &none  &none       &none       &none  &none  &none
+&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0                                                   &to 1            &none  &none       &none       &none  &none  &none
 &none       &none         &none         &none         &none         &none         &to 2                                                   &to 3            &none  &none       &none       &none  &none  &none
 &none       &none         &none         &none         &none         &none         &none  &none  &bootloader      &bootloader  &none       &none            &none  &none       &none       &none  &none  &none
 &none       &none         &none         &none         &none         &none                       &none            &none                                     &none  &none       &none       &none  &none  &none
-&none       &none         &none         &none         &none                       &none  &none  &none            &none        &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&bt BT_CLR  &none         &none         &none         &none                       &none  &none  &none            &none        &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
     };
