@@ -30,6 +30,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        copy: copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COPY";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_ARROW C>, <&mt LG(C) C>;
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PASTE";
+            #binding-cells = <0>;
+            bindings = <&mt RIGHT_ARROW V>, <&mt LG(V) V>;
+        };
+
+        back_slash: back_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BACK_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp BACKSLASH>;
+        };
     };
 
     macros {
@@ -40,11 +61,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE    &kp N1          &kp N2       &kp N3          &kp N4            &kp N5  &to 0                                                                 &to 1            &kp N6  &kp N7        &kp N8           &kp N9       &kp N0              &trans
-&kp CAPSLOCK  &kp Q           &kp W        &kp E           &kp R             &kp T   &to 2                                                                 &to 3            &kp Y   &kp U         &kp I            &kp O        &kp P               &trans
-&trans        &hm LEFT_ALT A  &hm LCTRL S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G   &none            &none          &none         &none          &none    &none            &kp H   &hm RSHIFT J  &hm RIGHT_GUI K  &hm RCTRL L  &hm RIGHT_ALT SEMI  &trans
-&trans        &kp Z           &kp X        &lt 1 C         &kp V             &kp B                                   &kp HOME      &kp PAGE_UP                              &kp N   &kp M         &lt 2 COMMA      &kp DOT      &kp FSLH            &trans
-&trans        &trans          &trans       &kp LEFT_ARROW  &kp RIGHT_ARROW           &hm LG(C) SPACE  &kp BACKSPACE  &kp END       &kp PAGE_DOWN  &kp TAB  &hm RG(V) ENTER          &kp UP_ARROW  &kp DOWN_ARROW   &trans       &trans              &trans
+&kp ESCAPE    &kp N1          &kp N2       &kp N3          &kp N4            &kp N5  &to 0                                                             &to 1        &kp N6  &kp N7          &kp N8                &kp N9       &kp N0              &trans
+&kp CAPSLOCK  &kp Q           &kp W        &kp E           &kp R             &kp T   &to 2                                                             &to 3        &kp Y   &kp U           &kp I                 &kp O        &kp P               &trans
+&trans        &hm LEFT_ALT A  &hm LCTRL S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G   &none        &none          &none         &none          &none    &none        &kp H   &hm RSHIFT J    &hm RIGHT_GUI K       &hm RCTRL L  &hm RIGHT_ALT SEMI  &trans
+&trans        &kp Z           &kp X        &copy           &paste            &kp B                               &kp HOME      &kp PAGE_UP                          &kp N   &mt UP_ARROW M  &mt DOWN_ARROW COMMA  &back_slash  &kp FSLH            &trans
+&trans        &trans          &trans       &trans          &trans                    &lt 1 SPACE  &kp BACKSPACE  &kp END       &kp PAGE_DOWN  &kp TAB  &lt 2 ENTER          &trans          &trans                &trans       &trans              &trans
             >;
         };
 
