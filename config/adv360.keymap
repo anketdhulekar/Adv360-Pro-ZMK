@@ -25,6 +25,71 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        dot_slash: dot_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOT_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp BACKSLASH>;
+        };
+
+        kp_mo: kp_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_MO";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        sq_caret: sq_caret {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SQ_CARET";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp CARET>;
+        };
+
+        dq_dollar: dq_dollar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DQ_DOLLAR";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES>, <&kp DOLLAR>;
+        };
+
+        lpar_pipe: lpar_pipe {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LPAR_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp PIPE>;
+        };
+
+        rpar_amp: rpar_amp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RPAR_AMP";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
+        };
+
+        lcurl_hash: lcurl_hash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LCURL_HASH";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp HASH>;
+        };
+
+        rcurl_perc: rcurl_perc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RCURL_PERC";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE>, <&kp PERCENT>;
+        };
+
+        lbr_at: lbr_at {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LBR_AT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp AT>;
+        };
     };
 
     macros {
@@ -35,21 +100,61 @@
 
         default_layer {
             bindings = <
-&kp ESC       &kp N1          &kp N2              &kp N3              &kp N4            &kp N5  &trans                                                 &trans     &kp N6  &kp N7             &kp N8               &kp N9               &kp N0              &trans
-&kp CAPSLOCK  &kp Q           &kp W               &kp E               &kp R             &kp T   &none                                                  &none      &kp Y   &kp U              &kp I                &kp O                &kp P               &trans
-&trans        &hm LEFT_ALT A  &hm LEFT_CONTROL S  &hm LEFT_COMMAND D  &hm LEFT_SHIFT F  &kp G   &none      &trans         &trans      &trans  &trans   &none      &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_COMMAND K  &hm RIGHT_CONTROL L  &hm RIGHT_ALT SEMI  &trans
-&trans        &kp Z           &kp X               &hm RG(C) C         &hm LG(V) V       &kp B                             &trans      &trans                      &kp N   &kp M              &kp COMMA            &mt BACKSLASH DOT    &kp FSLH            &trans
-&trans        &trans          &trans              &trans              &trans                    &kp SPACE  &kp BACKSPACE  &trans      &trans  &kp TAB  &kp ENTER          &trans             &trans               &trans               &trans              &trans
+&kp ESC       &kp N1          &kp N2              &kp N3              &kp N4            &kp N5  &trans                                                                &trans          &kp N6  &kp N7             &kp N8               &kp N9               &kp N0              &trans
+&kp CAPSLOCK  &kp Q           &kp W               &kp E               &kp R             &kp T   &none                                                                 &none           &kp Y   &kp U              &kp I                &kp O                &kp P               &trans
+&trans        &hm LEFT_ALT A  &hm LEFT_CONTROL S  &hm LEFT_COMMAND D  &hm LEFT_SHIFT F  &kp G   &none           &trans              &trans      &trans  &trans        &none           &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_COMMAND K  &hm RIGHT_CONTROL L  &hm RIGHT_ALT SEMI  &trans
+&trans        &kp Z           &kp X               &hm RG(C) C         &hm LG(V) V       &kp B                                       &trans      &trans                                &kp N   &kp M              &kp COMMA            &dot_slash           &kp FSLH            &trans
+&trans        &trans          &trans              &trans              &trans                    &kp_mo 1 SPACE  &kp_mo 2 BACKSPACE  &trans      &trans  &kp_mo 3 TAB  &kp_mo 4 ENTER          &trans             &trans               &trans               &trans              &trans
             >;
         };
 
         symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp F6   &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp F12  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans                                      &trans  &kp TILDE   &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION  &trans        &trans
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans                                      &trans  &sq_caret   &lpar_pipe     &rpar_amp          &kp COLON     &kp PLUS      &trans
+&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &dq_dollar  &lcurl_hash    &rcurl_perc        &trans        &trans        &trans
+&trans  &trans  &trans  &trans   &trans   &trans                   &trans      &trans                  &kp GRAVE   &lbr_at        &kp RIGHT_BRACKET  &kp EQUAL     &kp ASTERISK  &trans
+&trans  &trans  &trans  &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans              &trans         &trans             &trans        &trans        &trans
+            >;
+        };
+
+        numbers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        arrows {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        system {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
