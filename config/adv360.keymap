@@ -92,6 +92,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp AT>;
         };
+
+        semi_excl: semi_excl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SEMI_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp EXCLAMATION>;
+        };
+
+        minus_under: minus_under {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUS_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+        };
     };
 
     macros {
@@ -114,7 +128,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans                                      &trans  &kp TILDE   &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION  &trans        &trans
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans                                      &trans  &sq_caret   &lpar_pipe     &rpar_amp          &kp COLON     &kp PLUS      &trans
-&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &dq_dollar  &lcurl_hash    &rcurl_perc        &trans        &trans        &trans
+&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &dq_dollar  &lcurl_hash    &rcurl_perc        &semi_excl    &minus_under  &trans
 &trans  &trans  &trans  &trans   &trans   &trans                   &trans      &trans                  &kp GRAVE   &lbr_at        &kp RIGHT_BRACKET  &kp EQUAL     &kp ASTERISK  &trans
 &trans  &trans  &trans  &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans              &trans         &trans             &trans        &trans        &trans
             >;
