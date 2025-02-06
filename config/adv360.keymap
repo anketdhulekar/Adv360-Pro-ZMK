@@ -119,6 +119,30 @@
     macros {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        symbols {
+            bindings = <&to 1>;
+            key-positions = <51 65>;
+        };
+
+        numbers {
+            bindings = <&to 2>;
+            key-positions = <64 66>;
+        };
+
+        arrows {
+            bindings = <&to 3>;
+            key-positions = <54 69>;
+        };
+
+        mouse {
+            bindings = <&to 4>;
+            key-positions = <54 70>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
